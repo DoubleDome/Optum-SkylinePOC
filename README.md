@@ -1,10 +1,10 @@
-##Running the mock services
+## Running the mock services
 ```
 cd services
 node index.js
 ```
 
-##Running the interface
+## Running the interface
 ```
 cd interface
 npm run dev
