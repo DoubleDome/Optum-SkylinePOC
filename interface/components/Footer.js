@@ -14,9 +14,12 @@ function FooterStyles() {
       }
       .priceMessage {
         text-align: center;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
       }
       .footerNavigation {
         float: right;
+        border-bottom: 1px solid #ebebeb;
       }
       .footerNavigation li {
         width: 180px;
@@ -39,6 +42,9 @@ function FooterStyles() {
       .helpfulLinks a,
       .internationalLinks a {
         padding-left: 5px;
+      }
+      .bottomFooter {
+
       }
     `}</style>
   );
