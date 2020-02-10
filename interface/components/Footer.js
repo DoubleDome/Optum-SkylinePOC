@@ -6,7 +6,7 @@ function FooterStyles() {
       .footer {
         display: block;
         width: 100%;
-        float: left;
+        margin: 100px 0 auto 0;
       }
 
       .footer ul {
@@ -32,7 +32,7 @@ function FooterStyles() {
         font-size: 0.75em;
       }
       .footerNavigation li {
-        width: 180px;
+        width: calc(100% / 5);
         display: inline-block;
       }
       .footerNavigation h2 {
@@ -62,6 +62,10 @@ function FooterStyles() {
       .phoneContact img {
         float: left;
       }
+      .phoneContact img {
+        width: 45px;
+        margin: 10px;
+      }
     `}</style>
   );
 }
@@ -80,7 +84,7 @@ function Footer(props) {
         <div className="footerContent contentContainer">
           <ul className="footerNavigation">
             <li className="phoneContact">
-              <img src="phone.png"></img>
+              <img src={require('../assets/images/phone-icon.png')}></img>
               <div>
                 <p>Mon – Fri</p>
                 <p>8am – 10pm (est)</p>

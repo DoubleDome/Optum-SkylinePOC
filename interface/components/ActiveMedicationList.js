@@ -5,20 +5,18 @@ function ActiveMedicationListStyles() {
   return (
     <style jsx>{`
       .activeMedicationList {
-        height: 350px;
+        margin-top: 50px;
       }
       .activeMedicationList ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         display: block;
-        height: 250px;
       }
       .activeMedicationList li {
         float: left;
         display: inline-block;
         width: 270px;
-        height: 250px;
         border: 1px solid #ebebeb;
         margin: 0 10px 0 0;
         padding: 10px;
@@ -46,6 +44,7 @@ function ActiveMedicationList(props) {
     <React.Fragment>
       <ActiveMedicationListStyles></ActiveMedicationListStyles>
       <section class="activeMedicationList contentContainer">
+        <h1>{props.labels.sectionTitle}</h1>
         <button className="solid">{props.labels.fillAllMedicationsLabel}</button>
         <ul>{items}</ul>
       </section>

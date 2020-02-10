@@ -8,7 +8,10 @@ function ButtonListStyles() {
         bottom: 10px;
       }
       .buttonList button {
-        
+        margin-right: 10px;
+      }
+      .buttonList button:last-child {
+        margin-right: 0;
       }
     `}</style>
   );

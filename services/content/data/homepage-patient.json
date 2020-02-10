@@ -40,7 +40,7 @@
     {
       "type": "orderList",
       "labels": {
-        "title": "My Open Orders",
+        "sectionTitle": "My Open Orders",
         "estimatedLabel": "Estimated arrival for ",
         "detailsLabel": "Details of my order",
         "viewOrdersLabel": "View all orders"
@@ -67,6 +67,7 @@
     {
       "type": "activeMedications",
       "labels": {
+        "sectionTitle":"Active Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",
@@ -115,6 +116,7 @@
     {
       "type": "retailMedications",
       "labels": {
+        "sectionTitle":"Retail Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",

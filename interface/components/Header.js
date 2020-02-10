@@ -1,5 +1,17 @@
 import React from 'react';
 
+function HeaderStyles() {
+  return (
+    <style jsx>{`
+      .header {
+        text-align: center;
+        display: block;
+        margin: 50px 0;
+      }
+    `}</style>
+  );
+}
+
 function Header(props) {
   return (
     <React.Fragment>
@@ -11,19 +23,6 @@ function Header(props) {
         <h2>{props.labels.subtitle}</h2>
       </section>
     </React.Fragment>
-  );
-}
-
-function HeaderStyles() {
-  return (
-    <style jsx>{`
-      .header {
-        text-align: center;
-        display: block;
-      }
-      .header h1 {
-      }
-    `}</style>
   );
 }
 
