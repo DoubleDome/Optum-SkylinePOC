@@ -49,14 +49,14 @@
         "orders": [
           {
             "type": "drops",
-            "name": "Risperdal",
+            "medication": "Risperdal",
             "estimatedDeliveryDate": "Monday, Jan 20",
             "orderStatus": "process",
             "status": "backorder"
           },
           {
             "type": "pills",
-            "name": "Risperdal",
+            "medication": "Risperdal",
             "estimatedDeliveryDate": "Monday, Jan 20",
             "orderStatus": "order",
             "status": "ok"
@@ -66,12 +66,15 @@
     },
     {
       "type": "activeMedications",
-      "fillMedicationsLabel": "Fill all meds",
-      "homeDeliverySavingsLabel": " off retail with home delivery",
-      "readyForRefillLabel": "Ready to fill",
-      "archiveLabel": "Archive",
-      "autoRefillLabel": "Auto Refill ",
-      "refillsRemainingLabel": " refills remaining",
+      "labels": {
+        "fillAllMedicationsLabel": "Fill all meds",
+        "homeDeliverySavingsLabel": "off retail with home delivery",
+        "readyForRefillLabel": "Ready to fill",
+        "archiveLabel": "Archive",
+        "autoRefillLabel": "Auto Refill",
+        "refillsRemainingLabel": " refills remaining",
+        "supplyLabel": "day supply"
+      },
       "data": [
         {
           "name": "Kat J.",
@@ -81,6 +84,8 @@
               "medication": "Divalproex",
               "dosage": "125 mg tab",
               "price": "17.00",
+              "savingsAmount": "2",
+              "supplyAmount": "20",
               "refillDate": "Feb 15, 2020",
               "autoRefill": true,
               "refillCount": 1
@@ -89,16 +94,18 @@
               "medication": "Glyburide",
               "dosage": "125 mg tab",
               "price": "19.00",
+              "savingsAmount": "2",
               "refillDate": "Feb 17, 2020",
-              "autoRefill": true,
+              "autoRefill": false,
               "refillCount": 3
             },
             {
               "medication": "Ramipril",
               "dosage": "125 mg tab",
               "price": "21.00",
+              "savingsAmount": "2",
               "refillDate": "Feb 13, 2020",
-              "autoRefill": true,
+              "autoRefill": false,
               "refillCount": 2
             }
           ]
@@ -106,7 +113,58 @@
       ]
     },
     {
-      "viewAllMedsLabel": "View all meds"
+      "type": "retailMedications",
+      "labels": {
+        "fillAllMedicationsLabel": "Fill all meds",
+        "homeDeliverySavingsLabel": "off retail with home delivery",
+        "readyForRefillLabel": "Ready to fill",
+        "archiveLabel": "Archive",
+        "autoRefillLabel": "Auto Refill",
+        "refillsRemainingLabel": " refills remaining",
+        "supplyLabel": "day supply",
+        "transferLabel": "Transfer",
+        "refilllAllMedsLabel": "Refill all meds",
+        "viewAllMedsLabel": "View all meds"
+      },
+      "data": [
+        {
+          "name": "Kat J.",
+          "gender": "female",
+          "medications": [
+            {
+              "medication": "Divalproex",
+              "dosage": "125 mg tab",
+              "price": "17.00",
+              "savingsAmount": "2",
+              "supplyAmount": "20",
+              "refillDate": "Feb 15, 2020",
+              "autoRefill": true,
+              "refillCount": 1,
+              "isTransferable": true
+            },
+            {
+              "medication": "Glyburide",
+              "dosage": "125 mg tab",
+              "price": "19.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 17, 2020",
+              "autoRefill": false,
+              "refillCount": 3,
+              "isTransferable": true
+            },
+            {
+              "medication": "Ramipril",
+              "dosage": "125 mg tab",
+              "price": "21.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 13, 2020",
+              "autoRefill": false,
+              "refillCount": 2,
+              "isTransferable": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }

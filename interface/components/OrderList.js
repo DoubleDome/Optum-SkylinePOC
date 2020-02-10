@@ -3,7 +3,7 @@ import React from 'react';
 function OrderListStyles() {
   return (
     <style jsx>{`
-      .orderList {
+      .orderList ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -12,6 +12,10 @@ function OrderListStyles() {
       .orderList li {
         display: block;
         height: 160px;
+      }
+      .orderList > button {
+        margin: 0 auto 0 auto;
+        display: block;
       }
     `}</style>
   );
@@ -41,9 +45,12 @@ function OrderList(props) {
 
   return (
     <React.Fragment>
-      <OrderListStyles></OrderListStyles>
-      <h1>{props.title}</h1>
-      <ul className="orderList">{orderItems}</ul>
+      <section className="orderList">
+        <OrderListStyles></OrderListStyles>
+        <h1>{props.title}</h1>
+        <ul className="orderList">{orderItems}</ul>
+        <button className="viewOrdersButton knockout">{props.labels.viewOrdersLabel}</button>
+      </section>
     </React.Fragment>
   );
 }

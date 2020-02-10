@@ -45,7 +45,15 @@ function ActionTileStyles() {
       }
       .actionTile {
         float: left;
-        width: 300px;
+        width: 270px;
+        margin: 0 10px 0 0;
+        padding: 10px;
+        border: 1px solid #ebebeb;
+        height: 250px;
+        position:relative;
+      }
+      .actionTile:last-child {
+        margin: 0 0 0 0;
       }
     `}</style>
   );

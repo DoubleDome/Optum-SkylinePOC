@@ -4,6 +4,9 @@ import Layout from '../layouts/Layout';
 import Header from '../components/Header';
 import ActionTiles from '../components/ActionTiles';
 import OrderList from '../components/OrderList';
+import MedicationList from '../components/ActiveMedicationList';
+import RetailMedicationList from '../components/RetailMedicationList';
+import ActiveMedicationList from '../components/ActiveMedicationList';
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -27,6 +30,12 @@ class Index extends React.Component {
         break;
       case 'orderList':
         component = <OrderList labels={props.labels} data={props.data}></OrderList>;
+        break;
+      case 'activeMedications':
+        component = <ActiveMedicationList labels={props.labels} data={props.data}></ActiveMedicationList>;
+        break;
+      case 'retailMedications':
+        component = <RetailMedicationList labels={props.labels} data={props.data}></RetailMedicationList>;
         break;
       case 'actionTiles':
         component = <ActionTiles data={props.data}></ActionTiles>;

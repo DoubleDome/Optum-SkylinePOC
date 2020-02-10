@@ -4,6 +4,9 @@ function FooterStyles() {
   return (
     <style jsx>{`
       .footer {
+        display: block;
+        width: 100%;
+        float: left;
       }
 
       .footer ul {
@@ -16,10 +19,17 @@ function FooterStyles() {
         text-align: center;
         border-top: 1px solid #ebebeb;
         border-bottom: 1px solid #ebebeb;
+        font-size: 0.75em;
+        height: 60px;
+        line-height: 35px;
       }
+      .footerContent {
+        margin-top: 15px;
+      }
+
       .footerNavigation {
-        float: right;
         border-bottom: 1px solid #ebebeb;
+        font-size: 0.75em;
       }
       .footerNavigation li {
         width: 180px;
@@ -30,6 +40,11 @@ function FooterStyles() {
         font-size: 14pt;
       }
 
+      .bottomFooter {
+        padding-top: 20px;
+        font-size: 0.75em;
+        padding-bottom: 10px;
+      }
       .helpfulLinks,
       .internationalLinks {
         display: inline-block;
@@ -43,8 +58,9 @@ function FooterStyles() {
       .internationalLinks a {
         padding-left: 5px;
       }
-      .bottomFooter {
-
+      .phoneContact div,
+      .phoneContact img {
+        float: left;
       }
     `}</style>
   );
@@ -61,14 +77,15 @@ function Footer(props) {
             price provided to us at the time you place your order online or at a pharmacy.
           </p>
         </div>
-
-        <div className="contentContainer">
+        <div className="footerContent contentContainer">
           <ul className="footerNavigation">
-            <li>
+            <li className="phoneContact">
               <img src="phone.png"></img>
-              <span>Mon – Fri</span>
-              <span>8am – 10pm (est)</span>
-              <a href="#">Call me back</a>
+              <div>
+                <p>Mon – Fri</p>
+                <p>8am – 10pm (est)</p>
+                <a href="#">Call me back</a>
+              </div>
             </li>
             <li>
               <h2>Contact</h2>
