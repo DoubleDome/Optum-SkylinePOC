@@ -14,8 +14,7 @@ async function callAPI(URL) {
 class Index extends React.Component {
   static async getInitialProps() {
     const result = {};
-    result.user = await callAPI('http://localhost:3001/user/100000');
-    console.log(result.user);
+    result.user = await callAPI('http://localhost:3001/user/047017a4-1e89-46e6-8bea-aff3a94c6010');
     result.content = await callAPI(`http://localhost:3001/content/${result.user.type}`);
     return result;
   }

@@ -67,7 +67,7 @@
     {
       "type": "activeMedications",
       "labels": {
-        "sectionTitle": "Active Medications",
+        "sectionTitle":"Active Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",
@@ -116,7 +116,7 @@
     {
       "type": "retailMedications",
       "labels": {
-        "sectionTitle": "Retail Medications",
+        "sectionTitle":"Retail Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",
