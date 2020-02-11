@@ -12,6 +12,7 @@ function RetailMedicationListStyles() {
         margin: 0;
         padding: 0;
         display: block;
+        overflow: auto;
       }
       .retailMedicationList li {
         float: left;

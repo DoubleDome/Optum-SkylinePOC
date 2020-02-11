@@ -6,14 +6,15 @@ function FooterStyles() {
       .footer {
         display: block;
         width: 100%;
-        margin: 100px 0 auto 0;
+        margin: 50px 0 auto 0;
       }
 
       .footer ul {
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 0 0 20px 0;
         display: block;
+        overflow: auto;
       }
       .priceMessage {
         text-align: center;
@@ -30,8 +31,9 @@ function FooterStyles() {
       .footerNavigation {
         border-bottom: 1px solid #ebebeb;
         font-size: 0.75em;
+        overflow: auto;
       }
-      .footerNavigation li {
+      .footerNavigation > li {
         width: calc(100% / 5);
         display: inline-block;
       }
@@ -65,6 +67,9 @@ function FooterStyles() {
       .phoneContact img {
         width: 45px;
         margin: 10px;
+      }
+      .appIcons {
+        height: 24px;
       }
     `}</style>
   );
@@ -114,6 +119,11 @@ function Footer(props) {
             </li>
             <li>
               <h2>Try the app</h2>
+              <ul>
+                <li>
+                  <img className="appIcons" src={require('../assets/images/app-icons.png')}></img>
+                </li>
+              </ul>
             </li>
           </ul>
           <div className="bottomFooter">

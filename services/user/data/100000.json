@@ -1,0 +1,6 @@
+{
+  "id": 1000000,
+  "type": "caregiver",
+  "name": "Karen M.",
+  "managingUsers": [{ "id": 100001, "name": "Bill D." }, { "id": 100002, "name": "Jill M." }]
+}

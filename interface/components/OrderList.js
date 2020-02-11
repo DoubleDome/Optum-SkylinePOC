@@ -12,6 +12,7 @@ function OrderListStyles() {
         margin: 0;
         padding: 0;
         display: block;
+        overflow: auto;
       }
       .orderList li {
         display: block;

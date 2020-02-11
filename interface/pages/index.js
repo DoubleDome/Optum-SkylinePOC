@@ -4,29 +4,30 @@ import Layout from '../layouts/Layout';
 import Header from '../components/Header';
 import ActionTiles from '../components/ActionTiles';
 import OrderList from '../components/OrderList';
-import MedicationList from '../components/ActiveMedicationList';
 import RetailMedicationList from '../components/RetailMedicationList';
 import ActiveMedicationList from '../components/ActiveMedicationList';
 
+async function callAPI(URL) {
+  const response = await fetch(URL);
+  return await response.json();
+}
 class Index extends React.Component {
   static async getInitialProps() {
     const result = {};
-    result.user = await this.callAPI('http://localhost:3001/user/patient');
-    result.content = await this.callAPI(`http://localhost:3001/content/${result.user.type}`);
+    result.user = await callAPI('http://localhost:3001/user/100000');
+    console.log(result.user);
+    result.content = await callAPI(`http://localhost:3001/content/${result.user.type}`);
     return result;
   }
-
-  static async callAPI(URL) {
-    const response = await fetch(URL);
-    return await response.json();
-  }
-
 
   generateComponent(name, props) {
     let component;
     switch (name) {
       case 'header':
         component = <Header labels={props.labels} data={props.data}></Header>;
+        break;
+      case 'actionTiles':
+        component = <ActionTiles labels={props.labels} data={props.data}></ActionTiles>;
         break;
       case 'orderList':
         component = <OrderList labels={props.labels} data={props.data}></OrderList>;
@@ -36,9 +37,6 @@ class Index extends React.Component {
         break;
       case 'retailMedications':
         component = <RetailMedicationList labels={props.labels} data={props.data}></RetailMedicationList>;
-        break;
-      case 'actionTiles':
-        component = <ActionTiles data={props.data}></ActionTiles>;
         break;
     }
     return component;

@@ -11,7 +11,9 @@ function ActiveMedicationListStyles() {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
       .activeMedicationList li {
         float: left;

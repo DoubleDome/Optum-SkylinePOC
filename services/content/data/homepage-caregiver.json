@@ -1,4 +1,172 @@
 {
-  "title": "Caregiver",
-  "layout": [{ "type": "header", "data": { "title": "Candy Cane" } }]
+  "title": "Patient",
+  "layout": [
+    {
+      "type": "header",
+      "labels": {
+        "salutation": "Good morning, ",
+        "subtitle": "Things you ought to know"
+      },
+      "data": {
+        "name": "Emily"
+      }
+    },
+    {
+      "type": "actionTiles",
+      "data": [
+        {
+          "title": "Order status",
+          "subtitle": "There is a delay with your Risperdal order",
+          "body": "This drug is on backorder and may take up to 12 days to ship.",
+          "buttons": [{ "label": "View Orders", "type": "solid" }]
+        },
+        {
+          "title": "Upcoming refills",
+          "subtitle": "A refill for Ibuprofen & Glyburide is due",
+          "body": "You’ve been taking these for 25 days and you’ll need a refill in 5 days.",
+          "buttons": [
+            { "label": "Refill all", "type": "solid" },
+            { "label": "View meds", "type": "knockout" }
+          ]
+        },
+        {
+          "title": "Home delivery",
+          "subtitle": "You’ll get the meds you need delivered right to your door & SAVE $!",
+          "body": "We know the meds you get from your local pharmacy. Click the link below to select the meds you want delivered. ",
+          "buttons": [{ "label": "Transfer to home delivery", "type": "solid" }]
+        }
+      ]
+    },
+    {
+      "type": "orderList",
+      "labels": {
+        "sectionTitle": "My Open Orders",
+        "estimatedLabel": "Estimated arrival for ",
+        "detailsLabel": "Details of my order",
+        "viewOrdersLabel": "View all orders"
+      },
+      "data": {
+        "orders": [
+          {
+            "type": "drops",
+            "medication": "Risperdal",
+            "estimatedDeliveryDate": "Monday, Jan 20",
+            "orderStatus": "process",
+            "status": "backorder"
+          },
+          {
+            "type": "pills",
+            "medication": "Risperdal",
+            "estimatedDeliveryDate": "Monday, Jan 20",
+            "orderStatus": "order",
+            "status": "ok"
+          }
+        ]
+      }
+    },
+    {
+      "type": "activeMedications",
+      "labels": {
+        "sectionTitle": "Active Medications",
+        "fillAllMedicationsLabel": "Fill all meds",
+        "homeDeliverySavingsLabel": "off retail with home delivery",
+        "readyForRefillLabel": "Ready to fill",
+        "archiveLabel": "Archive",
+        "autoRefillLabel": "Auto Refill",
+        "refillsRemainingLabel": " refills remaining",
+        "supplyLabel": "day supply"
+      },
+      "data": [
+        {
+          "name": "Kat J.",
+          "gender": "female",
+          "medications": [
+            {
+              "medication": "Divalproex",
+              "dosage": "125 mg tab",
+              "price": "17.00",
+              "savingsAmount": "2",
+              "supplyAmount": "20",
+              "refillDate": "Feb 15, 2020",
+              "autoRefill": true,
+              "refillCount": 1
+            },
+            {
+              "medication": "Glyburide",
+              "dosage": "125 mg tab",
+              "price": "19.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 17, 2020",
+              "autoRefill": false,
+              "refillCount": 3
+            },
+            {
+              "medication": "Ramipril",
+              "dosage": "125 mg tab",
+              "price": "21.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 13, 2020",
+              "autoRefill": false,
+              "refillCount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "retailMedications",
+      "labels": {
+        "sectionTitle": "Retail Medications",
+        "fillAllMedicationsLabel": "Fill all meds",
+        "homeDeliverySavingsLabel": "off retail with home delivery",
+        "readyForRefillLabel": "Ready to fill",
+        "archiveLabel": "Archive",
+        "autoRefillLabel": "Auto Refill",
+        "refillsRemainingLabel": " refills remaining",
+        "supplyLabel": "day supply",
+        "transferLabel": "Transfer",
+        "refilllAllMedsLabel": "Refill all meds",
+        "viewAllMedsLabel": "View all meds"
+      },
+      "data": [
+        {
+          "name": "Kat J.",
+          "gender": "female",
+          "medications": [
+            {
+              "medication": "Divalproex",
+              "dosage": "125 mg tab",
+              "price": "17.00",
+              "savingsAmount": "2",
+              "supplyAmount": "20",
+              "refillDate": "Feb 15, 2020",
+              "autoRefill": true,
+              "refillCount": 1,
+              "isTransferable": true
+            },
+            {
+              "medication": "Glyburide",
+              "dosage": "125 mg tab",
+              "price": "19.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 17, 2020",
+              "autoRefill": false,
+              "refillCount": 3,
+              "isTransferable": true
+            },
+            {
+              "medication": "Ramipril",
+              "dosage": "125 mg tab",
+              "price": "21.00",
+              "savingsAmount": "2",
+              "refillDate": "Feb 13, 2020",
+              "autoRefill": false,
+              "refillCount": 2,
+              "isTransferable": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
