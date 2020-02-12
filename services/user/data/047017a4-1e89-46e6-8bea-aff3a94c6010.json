@@ -89,6 +89,7 @@
         {
           "name": "Kat J.",
           "gender": "female",
+          "selected": true,
           "medications": [
             {
               "medication": "Divalproex",
@@ -128,6 +129,7 @@
         "sectionTitle": "Retail Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
+        "nonTransferrableLabel": "This is non transferable to home delivery",
         "readyForRefillLabel": "Ready to fill",
         "archiveLabel": "Archive",
         "autoRefillLabel": "Auto Refill",

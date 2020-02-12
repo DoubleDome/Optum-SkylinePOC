@@ -14,9 +14,15 @@
 }
 
 :root{
+    --blue-1: #448FC9;
+    --blue-2: #498CDE;
     --teal-1: #E8F5F3;
     --teal-2: #00828D;
     --orange: #E0722D;
+    --grey-1: #D8D8D8;
+
+    --card-padding-internal: 20px;
+    --box-shadow-settings: 0 2px 15px rgba(0,0,0,.07);
 }
 
 body {
@@ -94,6 +100,13 @@ button.knockout {
     color: #47aab5;
 }
 
+button.text {
+    border: none;
+    background-color: transparent;
+    color: #47aab5;
+    text-decoration: underline;
+}
+
 /* Convert Into Components Later */
 .card-holder {
     list-style-type: none;
@@ -111,5 +124,5 @@ button.knockout {
     overflow: hidden;
     border: 1px solid #ebebeb;
     background-color: white;
-    box-shadow: 0 2px 15px rgba(0,0,0,.07);
+    box-shadow: var(--box-shadow-settings);
 }

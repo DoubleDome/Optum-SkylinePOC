@@ -1,5 +1,6 @@
 import React from 'react';
 import MedicationCard from './MedicationCard';
+import UserList from './UserList';
 
 function ActiveMedicationListStyles() {
   return (
@@ -27,13 +28,14 @@ function ActiveMedicationListStyles() {
 function ActiveMedicationList(props) {
   let items = [];
   props.data[0].medications.map((medication, index) => {
-    items.push(<MedicationCard key={index} labels={props.labels} data={medication}></MedicationCard>);
+    items.push(<MedicationCard key={index} labels={props.labels} data={medication} showAutoRefills={true}/>);
   });
   return (
     <React.Fragment>
       <ActiveMedicationListStyles></ActiveMedicationListStyles>
       <section className="activeMedicationList contentContainer">
         <h2>{props.labels.sectionTitle}</h2>
+        <UserList data={props.data}/>
         <button className="solid">{props.labels.fillAllMedicationsLabel}</button>
         <ul className="card-holder">{items}</ul>
       </section>
