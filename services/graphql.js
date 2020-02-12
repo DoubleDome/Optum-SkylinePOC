@@ -4,6 +4,7 @@ const fetch = require('isomorphic-unfetch');
 const { buildSchema } = require('graphql');
 const baseURL = 'http://localhost:3001';
 const port = 3002;
+const app = express();
 
 const {
   GraphQLObjectType,
@@ -15,20 +16,31 @@ const {
   GraphQLInputObjectType
 } = require('graphql');
 
-const app = express();
+function fetchAsPromise(relativeURL) {
+  return fetch(`${baseURL}${relativeURL}`);
+}
+
+function fetchAsJSON(relativeURL) {
+  return fetch(`${baseURL}${relativeURL}`).then(res => res.json());
+}
+
+function getUser(params) {
+  return fetchAsJSON(`/root`);
+}
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
   type Query {
     user(id: String): User
-    orders(id: String): [Order]
   }
   type User {
     id: String,
     type: String,
     name: String,
-    managingUsers: [User],
     orders: [Order]
+    managingUsers: [User]
+    activeMedications: [Medication]
+    retailMedications: [Medication]
   }
   type Order {
     id: String,
@@ -38,24 +50,22 @@ const schema = buildSchema(`
     orderStatus: String,
     status: String
   }
+  type Medication {
+    medication: String,
+    dosage: String,
+    price: String,
+    savingsAmount: String,
+    supplyAmount: String,
+    refillDate: String,
+    autoRefill: String,
+    refillCount: String
+  }
 `);
 
 // The root provides a resolver function for each API endpoint
 const root = {
-  user: getUser,
-  orders: getOrders
+  user: getUser
 };
-
-async function callAPI(relativeURL) {
-  return fetch(`${baseURL}${relativeURL}`).then(res => res.json());
-}
-
-function getUser(params) {
-  return callAPI(`/user/${params.id}`);
-}
-function getOrders(params) {
-  return callAPI(`/orders/${params.id}`);
-}
 
 app.use(
   '/graphql',

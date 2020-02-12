@@ -1,5 +1,6 @@
 {
-  "title": "Patient",
+  
+  "title": "Caregiver",
   "layout": [
     {
       "type": "header",
@@ -8,7 +9,7 @@
         "subtitle": "Things you ought to know"
       },
       "data": {
-        "name": "Emily"
+        "name": "Karen M."
       }
     },
     {
