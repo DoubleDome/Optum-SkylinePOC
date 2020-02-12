@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.json(require(`./data.json.js`));
+  res.json(require(`./data.json`));
 });
 
 module.exports = router;
