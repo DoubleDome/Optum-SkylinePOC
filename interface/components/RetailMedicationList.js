@@ -7,21 +7,6 @@ function RetailMedicationListStyles() {
       .retailMedicationList {
         margin-top: 50px;
       }
-      .retailMedicationList ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: block;
-        overflow: auto;
-      }
-      .retailMedicationList li {
-        float: left;
-        display: inline-block;
-        width: 270px;
-        border: 1px solid #ebebeb;
-        margin: 0 10px 0 0;
-        padding: 10px;
-      }
       .retailMedicationList li:last-child {
         margin: 0 0 0 0;
       }
@@ -49,7 +34,7 @@ function RetailMedicationList(props) {
       <section className="retailMedicationList">
         <h2>{props.labels.sectionTitle}</h2>
         <button className="solid">{props.labels.refilllAllMedsLabel}</button>
-        <ul>{items}</ul>
+        <ul className="card-holder">{items}</ul>
         <button className="knockout centered-button">{props.labels.viewAllMedsLabel}</button>
       </section>
     </React.Fragment>

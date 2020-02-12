@@ -29,7 +29,7 @@ function ActionTiles(props) {
   return (
     <React.Fragment>
       <ActionTileStyles></ActionTileStyles>
-      <ul className="actionTiles">{tiles}</ul>
+      <ul className="actionTiles card-holder">{tiles}</ul>
     </React.Fragment>
   );
 }
@@ -39,7 +39,7 @@ function ActionTile(props) {
   const {title, subtitle, body, buttons, color, svgPath} = props;
   const url = require(`../assets/svgs/${svgPath}.svg`);
   const style =  {
-    "background-color": color
+    "backgroundColor": color
   }
 
   return (
@@ -63,15 +63,6 @@ function ActionTile(props) {
 function ActionTileStyles() {
   return (
     <style jsx>{`
-      .actionTiles {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
       .actionTile {
         width: 290px;
         margin: 0 10px 0 0;

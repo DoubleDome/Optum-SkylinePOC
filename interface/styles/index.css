@@ -13,10 +13,16 @@
     src: url("../fonts/FrutigerLTPro-Roman.otf") format("otf"),
 }
 
+:root{
+    --teal-1: #E8F5F3;
+    --teal-2: #00828D;
+    --orange: #E0722D;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Frutiger-Roman', 'Open Sans', sans-serif;
+    font-family: 'Frutiger-Roman';
     font-size: 12px;
     background-color: #ECF3F4;
 
@@ -56,7 +62,7 @@ h5 {
     margin: 0;
     margin-bottom: 25px;
     font-weight: 600;
-    font-family: 'Frutiger-Bold', 'Open Sans', sans-serif;
+    font-family: 'Frutiger-Bold';
 }
 
 h1 {
@@ -89,7 +95,17 @@ button.knockout {
 }
 
 /* Convert Into Components Later */
+.card-holder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .card {
+    min-width: 290px;
     border-radius: 12px;
     flex-direction: column;
     overflow: hidden;

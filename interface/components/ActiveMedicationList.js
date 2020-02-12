@@ -8,22 +8,8 @@ function ActiveMedicationListStyles() {
         margin-top: 50px;
         position: relative
       }
-      .activeMedicationList ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .activeMedicationList li {
-        float: left;
-        display: inline-block;
-        width: 270px;
-        border: 1px solid #ebebeb;
-        margin: 0 10px 0 0;
-        padding: 10px;
-      }
+
+
       .activeMedicationList li:last-child {
         margin: 0 0 0 0;
       }
@@ -49,7 +35,7 @@ function ActiveMedicationList(props) {
       <section className="activeMedicationList contentContainer">
         <h2>{props.labels.sectionTitle}</h2>
         <button className="solid">{props.labels.fillAllMedicationsLabel}</button>
-        <ul>{items}</ul>
+        <ul className="card-holder">{items}</ul>
       </section>
     </React.Fragment>
   );

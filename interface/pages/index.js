@@ -20,24 +20,24 @@ class Index extends React.Component {
     return result;
   }
 
-  generateComponent(name, props) {
+  generateComponent(name, props, idx) {
     let component;
 
     switch (name) {
       case 'header':
-        component = <Header labels={props.labels} data={props.data}></Header>;
+        component = <Header key={idx} labels={props.labels} data={props.data}></Header>;
         break;
       case 'actionTiles':
-        component = <ActionTiles labels={props.labels} data={props.data}></ActionTiles>;
+        component = <ActionTiles key={idx} labels={props.labels} data={props.data}></ActionTiles>;
         break;
       case 'orderList':
-        component = <OrderList labels={props.labels} data={props.data}></OrderList>;
+        component = <OrderList key={idx} labels={props.labels} data={props.data}></OrderList>;
         break;
       case 'activeMedications':
-        component = <ActiveMedicationList labels={props.labels} data={props.data}></ActiveMedicationList>;
+        component = <ActiveMedicationList key={idx} labels={props.labels} data={props.data}></ActiveMedicationList>;
         break;
       case 'retailMedications':
-        component = <RetailMedicationList labels={props.labels} data={props.data}></RetailMedicationList>;
+        component = <RetailMedicationList key={idx} labels={props.labels} data={props.data}></RetailMedicationList>;
         break;
     }
     return component;
@@ -46,8 +46,8 @@ class Index extends React.Component {
   fetchComponents(content) {
     const result = [];
 
-    content.layout.forEach(component => {
-      result.push(this.generateComponent(component.type, component));
+    content.layout.forEach((component, idx) => {
+      result.push(this.generateComponent(component.type, component, idx));
     });
     return result;
   }

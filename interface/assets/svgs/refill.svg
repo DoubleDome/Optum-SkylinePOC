@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/refill" transform="translate(-6.000000, -6.000000)">
+            <circle id="Oval" fill="#007C89" cx="24" cy="24" r="18"></circle>
+            <path d="M24,16.897772 L24,20.4364351 L29,15.7182176 L24,11 L24,14.5386632 C18.475,14.5386632 14,18.7614679 14,23.9750983 C14,25.8269987 14.575,27.5491481 15.55,29 L17.375,27.2778506 C16.8125,26.2988204 16.5,25.1664482 16.5,23.9750983 C16.5,20.0707733 19.8625,16.897772 24,16.897772 Z M32.45,19 L30.625,20.7221494 C31.175,21.7129751 31.5,22.8335518 31.5,24.0249017 C31.5,27.9292267 28.1375,31.102228 24,31.102228 L24,27.5635649 L19,32.2817824 L24,37 L24,33.4613368 C29.525,33.4613368 34,29.2385321 34,24.0249017 C34,22.1730013 33.425,20.4508519 32.45,19 L32.45,19 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
