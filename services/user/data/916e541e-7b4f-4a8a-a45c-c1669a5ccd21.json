@@ -34,14 +34,6 @@
           ],
           "color": "#448FC9",
           "svgPath": "senior"
-        },
-        {
-          "title": "Home delivery",
-          "subtitle": "You’ll get the meds you need delivered right to your door & SAVE $!",
-          "body": "We know the meds you get from your local pharmacy. Click the link below to select the meds you want delivered. ",
-          "buttons": [{ "label": "Transfer to home delivery", "type": "solid" }],
-          "color": "#75B574",
-          "svgPath": "girl-computer"
         }
       ]
     },
