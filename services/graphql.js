@@ -25,7 +25,7 @@ function fetchAsJSON(relativeURL) {
 }
 
 function getUser(params) {
-  return fetchAsJSON(`/temp`);
+  return fetchAsJSON(`/root`);
 }
 
 // Construct a schema, using GraphQL schema language
