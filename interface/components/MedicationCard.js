@@ -7,7 +7,7 @@ function MedicationCardStyles(props) {
       {`
         .medicationCard {
           font-size: 0.8em;
-          margin: 0 10px 0 0;
+          margin: 0 5px 0 0;
         }
         .medication-card-icon {
           width: 80px;
@@ -25,7 +25,8 @@ function MedicationCardStyles(props) {
           color: var(--teal-2);
         }
         .medication-card-body{
-          padding: var(--card-padding-internal);
+          padding: var(--card-padding-internal); 
+          padding-bottom: 5px;
         }
         .medication-card-btn{
           width: 100%;
@@ -61,7 +62,7 @@ function MedicationCardStyles(props) {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          font-size: 13px;
+          font-size: 12px;
         }
         .medication-card-refill-icon{
           width: 25px;

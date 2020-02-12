@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Frutiger-Bold';
-    src: url("../fonts/FrutigerLTPro-Bold.otf") format("otf")
+    src: url("/fonts/FrutigerLTPro-Bold.otf")
 }
 
 @font-face {
     font-family: 'Frutiger-Light';
-    src: url("../fonts/FrutigerLTPro-Light.otf") format("otf"),
+    src: url("/fonts/FrutigerLTPro-Light.otf");
 }
 
 @font-face {
     font-family: 'Frutiger-Roman';
-    src: url("../fonts/FrutigerLTPro-Roman.otf") format("otf"),
+    src: url("/fonts/FrutigerLTPro-Roman.otf");
 }
 
 :root{
@@ -28,7 +28,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Frutiger-Roman';
+    font-family: Frutiger-Light;
     font-size: 12px;
     background-color: #ECF3F4;
 
@@ -67,15 +67,15 @@ h4,
 h5 {
     margin: 0;
     margin-bottom: 25px;
-    font-weight: 600;
     font-family: 'Frutiger-Bold';
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 34px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 
@@ -83,7 +83,9 @@ p {
     margin: 0;
     margin-bottom: 10px
 }
-
+button{
+    font-family: Frutiger-Light;
+}
 button.solid, button.knockout {
     border-radius: 5px;
     padding: 10px 15px;

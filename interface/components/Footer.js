@@ -60,6 +60,7 @@ function FooterStyles() {
       .footerNavigation h2 {
         font-size: 14pt;
         margin-bottom: 10px;
+        font-family: Frutiger-Light;
       }
 
       .bottomFooter {

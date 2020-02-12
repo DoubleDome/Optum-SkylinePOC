@@ -97,22 +97,20 @@ function ActionTileStyles() {
         padding-bottom: 25px;
       }
       .card-title{
-        font-family: Helvetica;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
         color: #FFFFFF;
         line-height: 1;
         margin: 0;
+        margin-left: 10px;
       }
       .card-headline {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 400;
         color: #444444;
         line-height: 1.4;
       }
       .card-body-text {
-        font-family: 'Open Sans', sans-serif;
         color: #444444;
         line-height: 1.4;
         margin-bottom: 25px;

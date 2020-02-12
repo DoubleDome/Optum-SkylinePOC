@@ -83,7 +83,7 @@ function UserListStyles() {
         position: relative;
       }
       .user-name{
-
+        font-family: Frutiger-Bold;
       }
 
       .user-button--selected:after{

@@ -7,30 +7,6 @@ import morningSVG from '../assets/svgs/morning-landscape.svg';
 function GlobalStyles() {
   return (
     <style jsx global> {`
-      @font-face {
-          font-family: 'Frutiger-Bold';
-          src: url("../fonts/FrutigerLTPro-Bold.otf") format("otf")
-      }
-      
-      @font-face {
-          font-family: 'Frutiger-Light';
-          src: url("../fonts/FrutigerLTPro-Light.otf") format("otf"),
-      }
-      
-      @font-face {
-          font-family: 'Frutiger-Roman';
-          src: url("../fonts/FrutigerLTPro-Roman.otf") format("otf"),
-      }
-      h1,
-h2,
-h3,
-h4,
-h5 {
-    margin: 0;
-    margin-bottom: 25px;
-    font-weight: 600;
-    font-family: 'Frutiger-Bold';
-}
       .contentContainer {
         width: 900px;
         margin-right: auto;
