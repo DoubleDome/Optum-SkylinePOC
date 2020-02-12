@@ -31,6 +31,7 @@ function NavigationStyles() {
         height: 40px;
         margin-top: 10px;
         margin-bottom: 10px;
+        position: relative;
       }
       .topNavigation img {
         height: 35px;

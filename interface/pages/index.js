@@ -7,6 +7,7 @@ import OrderList from '../components/OrderList';
 import RetailMedicationList from '../components/RetailMedicationList';
 import ActiveMedicationList from '../components/ActiveMedicationList';
 
+
 async function callAPI(URL) {
   const response = await fetch(URL);
   return await response.json();
@@ -21,6 +22,7 @@ class Index extends React.Component {
 
   generateComponent(name, props) {
     let component;
+
     switch (name) {
       case 'header':
         component = <Header labels={props.labels} data={props.data}></Header>;
@@ -43,6 +45,7 @@ class Index extends React.Component {
 
   fetchComponents(content) {
     const result = [];
+
     content.layout.forEach(component => {
       result.push(this.generateComponent(component.type, component));
     });

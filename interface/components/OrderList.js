@@ -6,6 +6,7 @@ function OrderListStyles() {
     <style jsx>{`
       .orderList {
         margin-top: 50px;
+        position: relative;
       }
       .orderList ul {
         list-style-type: none;
@@ -14,50 +15,67 @@ function OrderListStyles() {
         display: block;
         overflow: auto;
       }
-      .orderList li {
-        display: block;
-        height: 110px;
-        border: 1px solid #ebebeb;
-        margin-bottom: 10px;
-        padding: 15px;
-        font-size: 0.8em;
-      }
       .orderList li img {
-        float: left;
         height: 70px;
         margin-right: 15px;
-        margin-top: 20px;
       }
       .orderList > button {
         margin: 0 auto 0 auto;
         display: block;
       }
-      .orderDetailsContainer {
-        width: 300px;
-        display: inline-block;
-        float: left;
+      .order-details-list-item {
+        height: 110px;
+        margin-bottom: 25px;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .order-details-list-item-wrapper {
+        width: calc(40% - 10px);
+        display: flex;
+        align-items: center;
+        min-width: 300px;
       }
       .viewOrdersButton {
         display: block;
         margin-top: 40px;
+        
       }
+      .order-details-wrapper{
+        display: flex;
+        flex-direction: column;
+      }
+      .order-date{
+        font-size: 18px;
+      }
+
+      .order-details-list-slider{
+        width: calc(50% - 10px);
+      }
+    
     `}</style>
   );
 }
 
 function OrderItem(props) {
   return (
-    <li>
-      <div className="orderDetailsContainer">
+    <li className="card order-details-list-item">
+      <div className="order-details-list-item-wrapper">
         <img src={require(`../assets/images/${props.data.type}-icon.png`)}></img>
-        <p>{props.data.estimatedDeliveryDate}</p>
-        <p>
-          {props.labels.estimatedLabel}
-          {props.data.medication}
-        </p>
-        <a href="#">{props.labels.detailsLabel}</a>
+        <div className="order-details-wrapper">
+          <p className="order-date">{props.data.estimatedDeliveryDate}</p>
+          <p>
+            {props.labels.estimatedLabel}
+            {props.data.medication}
+          </p>
+          <a href="#">{props.labels.detailsLabel}</a>
+        </div>
       </div>
-      <Slider orderStatus={props.data.orderStatus}></Slider>
+      <div className="order-details-list-slider">
+        <Slider orderStatus={props.data.orderStatus}></Slider>
+      </div>
     </li>
   );
 }
@@ -73,7 +91,7 @@ function OrderList(props) {
     <React.Fragment>
       <OrderListStyles></OrderListStyles>
       <section className="orderList">
-        <h1>{props.labels.sectionTitle}</h1>
+        <h2>{props.labels.sectionTitle}</h2>
         <ul className="orderList">{orderItems}</ul>
         <button className="viewOrdersButton knockout">{props.labels.viewOrdersLabel}</button>
       </section>

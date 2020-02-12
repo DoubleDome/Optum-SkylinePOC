@@ -4,11 +4,17 @@ function ButtonListStyles() {
   return (
     <style jsx>{`
       .buttonList {
-        position: absolute;
-        bottom: 10px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .buttonList button {
         margin-right: 10px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
       }
       .buttonList button:last-child {
         margin-right: 0;

@@ -23,7 +23,7 @@ function MedicationCard(props) {
   return (
     <React.Fragment>
       <MedicationCardStyles></MedicationCardStyles>
-      <li className="medicationCard">
+      <li className="medicationCard card">
         <p>
           {props.data.refillCount} {props.labels.refillsRemainingLabel}
         </p>

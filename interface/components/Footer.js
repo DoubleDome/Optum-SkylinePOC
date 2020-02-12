@@ -7,6 +7,7 @@ function FooterStyles() {
         display: block;
         width: 100%;
         margin: 50px 0 auto 0;
+        background-color: white;
       }
 
       .footer ul {

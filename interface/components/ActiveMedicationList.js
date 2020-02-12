@@ -6,6 +6,7 @@ function ActiveMedicationListStyles() {
     <style jsx>{`
       .activeMedicationList {
         margin-top: 50px;
+        position: relative
       }
       .activeMedicationList ul {
         list-style-type: none;
@@ -27,7 +28,7 @@ function ActiveMedicationListStyles() {
         margin: 0 0 0 0;
       }
       .activeMedicationList > button {
-        margin: 10px auto 10px auto;
+        margin-bottom: 25px;
       }
       .activeMedicationList > .centered-button {
         display: block;
@@ -45,8 +46,8 @@ function ActiveMedicationList(props) {
   return (
     <React.Fragment>
       <ActiveMedicationListStyles></ActiveMedicationListStyles>
-      <section class="activeMedicationList contentContainer">
-        <h1>{props.labels.sectionTitle}</h1>
+      <section className="activeMedicationList contentContainer">
+        <h2>{props.labels.sectionTitle}</h2>
         <button className="solid">{props.labels.fillAllMedicationsLabel}</button>
         <ul>{items}</ul>
       </section>

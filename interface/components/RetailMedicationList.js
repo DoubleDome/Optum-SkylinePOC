@@ -27,11 +27,12 @@ function RetailMedicationListStyles() {
       }
 
       .retailMedicationList > button {
-        margin: 10px auto 10px auto;
+        margin-bottom: 25px;
       }
       .retailMedicationList > .centered-button {
         display: block;
         margin-top: 40px;
+        margin: 40px auto 0;
       }
     `}</style>
   );
@@ -46,7 +47,7 @@ function RetailMedicationList(props) {
     <React.Fragment>
       <RetailMedicationListStyles></RetailMedicationListStyles>
       <section className="retailMedicationList">
-        <h1>{props.labels.sectionTitle}</h1>
+        <h2>{props.labels.sectionTitle}</h2>
         <button className="solid">{props.labels.refilllAllMedsLabel}</button>
         <ul>{items}</ul>
         <button className="knockout centered-button">{props.labels.viewAllMedsLabel}</button>
