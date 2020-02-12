@@ -1,5 +1,5 @@
 {
-  "title": "Patient",
+  "title": "Caregiver",
   "layout": [
     {
       "type": "header",
@@ -8,7 +8,7 @@
         "subtitle": "Things you ought to know"
       },
       "data": {
-        "name": "Emily"
+        "name": "Bill M."
       }
     },
     {
@@ -18,7 +18,9 @@
           "title": "Order status",
           "subtitle": "There is a delay with your Risperdal order",
           "body": "This drug is on backorder and may take up to 12 days to ship.",
-          "buttons": [{ "label": "View Orders", "type": "solid" }]
+          "buttons": [{ "label": "View Orders", "type": "solid" }],
+          "color": "#47AAB5",
+          "svgPath": "prescription"
         },
         {
           "title": "Upcoming refills",
@@ -27,13 +29,17 @@
           "buttons": [
             { "label": "Refill all", "type": "solid" },
             { "label": "View meds", "type": "knockout" }
-          ]
+          ],
+          "color": "#448FC9",
+          "svgPath": "senior"
         },
         {
           "title": "Home delivery",
           "subtitle": "You’ll get the meds you need delivered right to your door & SAVE $!",
           "body": "We know the meds you get from your local pharmacy. Click the link below to select the meds you want delivered. ",
-          "buttons": [{ "label": "Transfer to home delivery", "type": "solid" }]
+          "buttons": [{ "label": "Transfer to home delivery", "type": "solid" }],
+          "color": "#75B574",
+          "svgPath": "girl-computer"
         }
       ]
     },
@@ -67,7 +73,7 @@
     {
       "type": "activeMedications",
       "labels": {
-        "sectionTitle":"Active Medications",
+        "sectionTitle": "Active Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",
@@ -116,7 +122,7 @@
     {
       "type": "retailMedications",
       "labels": {
-        "sectionTitle":"Retail Medications",
+        "sectionTitle": "Retail Medications",
         "fillAllMedicationsLabel": "Fill all meds",
         "homeDeliverySavingsLabel": "off retail with home delivery",
         "readyForRefillLabel": "Ready to fill",

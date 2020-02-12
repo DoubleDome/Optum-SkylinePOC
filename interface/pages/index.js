@@ -13,11 +13,8 @@ async function callAPI(URL) {
   return await response.json();
 }
 class Index extends React.Component {
-  static async getInitialProps() {
-    const result = {};
-    result.user = await callAPI('http://localhost:3001/user/047017a4-1e89-46e6-8bea-aff3a94c6010');
-    result.content = await callAPI(`http://localhost:3001/content/${result.user.type}`);
-    return result;
+  static async getInitialProps({query}) {
+    return await callAPI(`http://localhost:3001/user/${query.id || '047017a4-1e89-46e6-8bea-aff3a94c6010'}`);
   }
 
   generateComponent(name, props) {
@@ -53,7 +50,7 @@ class Index extends React.Component {
   }
 
   render() {
-    return <Layout>{this.fetchComponents(this.props.content).map(component => component)}</Layout>;
+    return <Layout>{this.fetchComponents(this.props).map(component => component)}</Layout>;
   }
 }
 
