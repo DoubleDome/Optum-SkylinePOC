@@ -6,6 +6,7 @@ import ActionTiles from '../components/ActionTiles';
 import OrderList from '../components/OrderList';
 import RetailMedicationList from '../components/RetailMedicationList';
 import ActiveMedicationList from '../components/ActiveMedicationList';
+import UserList from '../components/UserList';
 
 
 async function callAPI(URL) {
@@ -29,6 +30,9 @@ class Index extends React.Component {
         break;
       case 'orderList':
         component = <OrderList key={idx} labels={props.labels} data={props.data}></OrderList>;
+        break;
+      case 'userList':
+        component = <UserList key={idx} labels={props.labels} data={props.data}></UserList>;
         break;
       case 'activeMedications':
         component = <ActiveMedicationList key={idx} labels={props.labels} data={props.data}></ActiveMedicationList>;

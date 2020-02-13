@@ -1,42 +1,41 @@
 import React from 'react';
 
-
 const iconRouter = {
-  female: "girl",
-  male: "boy"
-}
+  female: 'girl',
+  male: 'boy'
+};
 
-function UserList({data = []}) {
-
+function UserList({ data = [] }) {
   const view = data.map((user, idx) => {
-    const {gender, name, selected} = user;
-
+    const { gender, name, selected } = user;
+    if (name) {
+      return (
+        <li key={idx} className={`user`}>
+          <button className={`user-button ${selected ? 'user-button--selected' : ''}`} selected={selected}>
+            <div className="user-icon-wrapper">
+              <img className="user-icon" src={require(`../assets/svgs/${iconRouter[gender]}.svg`)} />
+            </div>
+            <span className="user-name">{name}</span>
+          </button>
+        </li>
+      );
+    }
+  });
+  if (!data[0].name) {
+    return <React.Fragment></React.Fragment>;
+  } else {
     return (
-      <li key={idx} className={`user`}>
-       <button className={`user-button ${selected ? 'user-button--selected' : ''}`} selected={selected}>
-        <div className="user-icon-wrapper">
-            <img className="user-icon" src={require(`../assets/svgs/${iconRouter[gender]}.svg`)}/>
-          </div>
-          <span className="user-name">{name}</span>
-       </button>
-      </li>
-    )
-  })
-  return (
-    <React.Fragment>
-       <UserListStyles></UserListStyles>
-      <div className="user-list">
-        <ul className="users">
-          {view}
-        </ul>
-      </div>
-    </React.Fragment>
-  );
+      <React.Fragment>
+        <UserListStyles></UserListStyles>
+        <div className="user-list">
+          <ul className="users">{view}</ul>
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
-function User(){
-
-}
+function User() {}
 
 function UserListStyles() {
   return (
@@ -49,8 +48,8 @@ function UserListStyles() {
         border-bottom: 1px solid var(--grey-1);
       }
       .user-icon-wrapper {
-        border-radius: 50% ;
-        padding:10px;
+        border-radius: 50%;
+        padding: 10px;
         width: 25px;
         height: 25px;
         display: flex;
@@ -82,11 +81,11 @@ function UserListStyles() {
         border: none;
         position: relative;
       }
-      .user-name{
+      .user-name {
         font-family: Frutiger-Bold;
       }
 
-      .user-button--selected:after{
+      .user-button--selected:after {
         content: '';
         width: calc(100% + 20px);
         height: 5px;

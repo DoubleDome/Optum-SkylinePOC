@@ -15,7 +15,7 @@
     },
     {
       "type": "actionTiles",
-      "labels":{},
+      "labels": {},
       "data": [
         {
           "title": "Order status",
@@ -87,8 +87,8 @@
       },
       "data": [
         {
-          "name": "Kat J.",
-          "gender": "female",
+          "name": "Bill M.",
+          "gender": "male",
           "selected": true,
           "medications": [
             {

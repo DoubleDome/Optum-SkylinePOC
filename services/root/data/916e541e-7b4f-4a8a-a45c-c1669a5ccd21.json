@@ -1,0 +1,92 @@
+{
+  "id": "047017a4-1e89-46e6-8bea-aff3a94c6010",
+  "type": "patient",
+  "name": "Bill M.",
+  "orders": [
+    {
+      "id": "f7b41d62-4dbd-11ea-b77f-2e728ce88125",
+      "type": "drops",
+      "medication": "Risperdal",
+      "estimatedDeliveryDate": "Monday, Jan 20",
+      "orderStatus": "process",
+      "status": "backorder"
+    },
+    {
+      "id": "f7b4229e-4dbd-11ea-b77f-2e728ce88125",
+      "type": "pills",
+      "medication": "Glyburide",
+      "estimatedDeliveryDate": "Monday, Jan 20",
+      "orderStatus": "order",
+      "status": "ok"
+    },
+    {
+      "id": "f7b4229e-4dbd-11ea-b77f-2e728ce88125",
+      "type": "pills",
+      "medication": "Glyburide",
+      "estimatedDeliveryDate": "Monday, Jan 20",
+      "orderStatus": "order",
+      "status": "ok"
+    }
+  ],
+  "managingUsers": [],
+  "activeMedications": [
+    {
+      "medication": "Divalproex",
+      "dosage": "125 mg tab",
+      "price": "17.00",
+      "savingsAmount": "2",
+      "supplyAmount": "20",
+      "refillDate": "Feb 15, 2020",
+      "autoRefill": true,
+      "refillCount": 1
+    },
+    {
+      "medication": "Glyburide",
+      "dosage": "125 mg tab",
+      "price": "19.00",
+      "savingsAmount": "2",
+      "refillDate": "Feb 17, 2020",
+      "autoRefill": false,
+      "refillCount": 3
+    },
+    {
+      "medication": "Ramipril",
+      "dosage": "125 mg tab",
+      "price": "21.00",
+      "savingsAmount": "2",
+      "refillDate": "Feb 13, 2020",
+      "autoRefill": false,
+      "refillCount": 2
+    }
+  ],
+  "retailMedications": [
+    {
+      "medication": "Divalproex",
+      "dosage": "125 mg tab",
+      "price": "17.00",
+      "savingsAmount": "2",
+      "supplyAmount": "20",
+      "refillDate": "Feb 15, 2020",
+      "autoRefill": true,
+      "refillCount": 1
+    },
+    {
+      "medication": "Glyburide",
+      "dosage": "125 mg tab",
+      "price": "19.00",
+      "savingsAmount": "2",
+      "refillDate": "Feb 17, 2020",
+      "autoRefill": false,
+      "refillCount": 3
+    },
+    {
+      "medication": "Ramipril",
+      "dosage": "125 mg tab",
+      "price": "21.00",
+      "savingsAmount": "2",
+      "refillDate": "Feb 13, 2020",
+      "autoRefill": false,
+      "refillCount": 2
+    }
+  ]
+}
