@@ -17,14 +17,6 @@
       "type": "actionTiles",
       "data": [
         {
-          "title": "Order status",
-          "subtitle": "There is a delay with your Risperdal order",
-          "body": "This drug is on backorder and may take up to 12 days to ship.",
-          "buttons": [{ "label": "View Orders", "type": "solid" }],
-          "color": "#47AAB5",
-          "svgPath": "prescription"
-        },
-        {
           "title": "Upcoming refills",
           "subtitle": "A refill for Ibuprofen & Glyburide is due",
           "body": "You’ve been taking these for 25 days and you’ll need a refill in 5 days.",
@@ -34,6 +26,14 @@
           ],
           "color": "#448FC9",
           "svgPath": "senior"
+        },
+        {
+          "title": "Order status",
+          "subtitle": "There is a delay with your Risperdal order",
+          "body": "This drug is on backorder and may take up to 12 days to ship.",
+          "buttons": [{ "label": "View Orders", "type": "solid" }],
+          "color": "#47AAB5",
+          "svgPath": "prescription"
         }
       ]
     },
@@ -53,13 +53,6 @@
             "estimatedDeliveryDate": "Monday, Jan 20",
             "orderStatus": "process",
             "status": "backorder"
-          },
-          {
-            "type": "pills",
-            "medication": "Risperdal",
-            "estimatedDeliveryDate": "Monday, Jan 20",
-            "orderStatus": "order",
-            "status": "ok"
           }
         ]
       }

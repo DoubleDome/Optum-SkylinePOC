@@ -91,16 +91,6 @@
           "gender": "female",
           "medications": [
             {
-              "medication": "Divalproex",
-              "dosage": "125 mg tab",
-              "price": "17.00",
-              "savingsAmount": "2",
-              "supplyAmount": "20",
-              "refillDate": "Feb 15, 2020",
-              "autoRefill": true,
-              "refillCount": 1
-            },
-            {
               "medication": "Glyburide",
               "dosage": "125 mg tab",
               "price": "19.00",
