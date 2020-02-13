@@ -6,7 +6,7 @@ import morningSVG from '../assets/svgs/morning-landscape.svg';
 
 function GlobalStyles() {
   return (
-    <style jsx>{`
+    <style jsx global> {`
       .contentContainer {
         width: 900px;
         margin-right: auto;
@@ -21,7 +21,7 @@ function GlobalStyles() {
         left: 0;
         width: 100%;
       }
-    `}</style>
+    `} </style>
   );
 }
 

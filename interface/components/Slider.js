@@ -1,4 +1,6 @@
 import React from 'react';
+import {Slider, withStyles} from '@material-ui/core';
+
 
 function SliderStyles() {
   return (
@@ -37,28 +39,78 @@ function SliderStyles() {
     `}</style>
   );
 }
-function Slider(props) {
-  let position = {
-    order: 0,
-    process: 25,
-    ship: 75,
-    deliver: 100
-  };
+
+function valueText(value){
+  return value
+}
+function determineDefaultValue(orderStatus, marks = []){
+ const mark = marks.find(mark => {
+    return mark.label.toLowerCase() === orderStatus.toLowerCase();
+  })
+
+  return mark.value
+}
+
+function CustomSlider(props) {
+  const {marks, orderStatus, status} = props;
+  const defaultValue = determineDefaultValue(orderStatus, marks)
+
+  const color = status !== 'ok' ? '#E0722D' : '#00828D';
+  const PrettoSlider = withStyles({
+    root: {
+      color,
+      height: 8,
+    },
+    thumb: {
+      height: 24,
+      width: 24,
+      // backgroundColor: '#fff',
+      border: '2px solid currentColor',
+      marginTop: -8,
+      marginLeft: -12,
+      '&:focus,&:hover,&$active': {
+        boxShadow: 'inherit',
+      },
+    },
+    active: {},
+    valueLabel: {
+      left: 'calc(-50% + 4px)',
+    },
+    track: {
+      height: 8,
+      borderRadius: 4,
+    },
+    rail: {
+      height: 8,
+      borderRadius: 4,
+    },
+  })(Slider);
+
+
+
   return (
     <React.Fragment>
       <SliderStyles></SliderStyles>
       <div className="sliderContainer">
-        <input
+      <PrettoSlider
+        defaultValue={defaultValue}
+        getAriaValueText={valueText}
+        aria-labelledby="discrete-slider-custom"
+        step={null}
+        valueLabelDisplay="auto"
+        marks={marks}
+      />
+        {/* <input
           type="range"
           min="1"
           max="100"
           value={position[props.orderStatus]}
           className="slider"
-          id="myRange"
-        ></input>
+          id="myRange" 
+        ></input> */}
       </div>
     </React.Fragment>
   );
 }
 
-export default Slider;
+export default CustomSlider;

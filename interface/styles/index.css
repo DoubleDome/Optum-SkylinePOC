@@ -1,22 +1,34 @@
 @font-face {
     font-family: 'Frutiger-Bold';
-    src: url("../fonts/FrutigerLTPro-Bold.otf") format("otf")
+    src: url("/fonts/FrutigerLTPro-Bold.otf")
 }
 
 @font-face {
     font-family: 'Frutiger-Light';
-    src: url("../fonts/FrutigerLTPro-Light.otf") format("otf"),
+    src: url("/fonts/FrutigerLTPro-Light.otf");
 }
 
 @font-face {
     font-family: 'Frutiger-Roman';
-    src: url("../fonts/FrutigerLTPro-Roman.otf") format("otf"),
+    src: url("/fonts/FrutigerLTPro-Roman.otf");
+}
+
+:root{
+    --blue-1: #448FC9;
+    --blue-2: #498CDE;
+    --teal-1: #E8F5F3;
+    --teal-2: #00828D;
+    --orange: #E0722D;
+    --grey-1: #D8D8D8;
+
+    --card-padding-internal: 20px;
+    --box-shadow-settings: 0 2px 15px rgba(0,0,0,.07);
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Frutiger-Roman', 'Open Sans', sans-serif;
+    font-family: Frutiger-Light;
     font-size: 12px;
     background-color: #ECF3F4;
 
@@ -55,15 +67,15 @@ h4,
 h5 {
     margin: 0;
     margin-bottom: 25px;
-    font-weight: 600;
-    font-family: 'Frutiger-Bold', 'Open Sans', sans-serif;
+    font-family: 'Frutiger-Bold';
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 34px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 
@@ -71,7 +83,9 @@ p {
     margin: 0;
     margin-bottom: 10px
 }
-
+button{
+    font-family: Frutiger-Light;
+}
 button.solid, button.knockout {
     border-radius: 5px;
     padding: 10px 15px;
@@ -88,12 +102,29 @@ button.knockout {
     color: #47aab5;
 }
 
+button.text {
+    border: none;
+    background-color: transparent;
+    color: #47aab5;
+    text-decoration: underline;
+}
+
 /* Convert Into Components Later */
+.card-holder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .card {
+    min-width: 290px;
     border-radius: 12px;
     flex-direction: column;
     overflow: hidden;
     border: 1px solid #ebebeb;
     background-color: white;
-    box-shadow: 0 2px 15px rgba(0,0,0,.07);
+    box-shadow: var(--box-shadow-settings);
 }

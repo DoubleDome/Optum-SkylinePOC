@@ -1,6 +1,25 @@
 import React from 'react';
 import Slider from './Slider';
 
+const ORDER_MARKS = [
+  {
+    value: 0,
+    label: 'Order',
+  },
+  {
+    value: 33,
+    label: 'Process',
+  },
+  {
+    value: 66,
+    label: 'Ship',
+  },
+  {
+    value: 100,
+    label: 'Deliver',
+  },
+];
+
 function OrderListStyles() {
   return (
     <style jsx>{`
@@ -74,7 +93,7 @@ function OrderItem(props) {
         </div>
       </div>
       <div className="order-details-list-slider">
-        <Slider orderStatus={props.data.orderStatus}></Slider>
+        <Slider status={props.data.status} orderStatus={props.data.orderStatus} marks={ORDER_MARKS}></Slider>
       </div>
     </li>
   );

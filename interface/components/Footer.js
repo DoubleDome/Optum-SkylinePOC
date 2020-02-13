@@ -10,20 +10,29 @@ function FooterStyles() {
         background-color: white;
       }
 
-      .footer ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0 0 20px 0;
-        display: block;
-        overflow: auto;
+      .footer-item{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+      }
+      .footer-item--vertical{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
       }
       .priceMessage {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         border-top: 1px solid #ebebeb;
         border-bottom: 1px solid #ebebeb;
         font-size: 0.75em;
         height: 60px;
         line-height: 35px;
+      }
+      .priceMessage p {
+        margin: auto;
+        width: 900px;
       }
       .footerContent {
         margin-top: 15px;
@@ -33,14 +42,25 @@ function FooterStyles() {
         border-bottom: 1px solid #ebebeb;
         font-size: 0.75em;
         overflow: auto;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+
       }
-      .footerNavigation > li {
-        width: calc(100% / 5);
-        display: inline-block;
+      .footerNavigation ul{
+        padding: 0;
+      }
+      .footerNavigation li {
+        list-style: none;
+        margin-bottom: 5px;
+      }
+      .footerNavigation p {
+        margin-bottom: 5px;
       }
       .footerNavigation h2 {
-        display: inline-block;
         font-size: 14pt;
+        margin-bottom: 10px;
+        font-family: Frutiger-Light;
       }
 
       .bottomFooter {
@@ -61,13 +81,9 @@ function FooterStyles() {
       .internationalLinks a {
         padding-left: 5px;
       }
-      .phoneContact div,
-      .phoneContact img {
-        float: left;
-      }
       .phoneContact img {
         width: 45px;
-        margin: 10px;
+        margin-right: 10px;
       }
       .appIcons {
         height: 24px;
@@ -89,7 +105,7 @@ function Footer(props) {
         </div>
         <div className="footerContent contentContainer">
           <ul className="footerNavigation">
-            <li className="phoneContact">
+            <li className="footer-item phoneContact">
               <img src={require('../assets/images/phone-icon.png')}></img>
               <div>
                 <p>Mon – Fri</p>
@@ -97,28 +113,28 @@ function Footer(props) {
                 <a href="#">Call me back</a>
               </div>
             </li>
-            <li>
+            <li className="footer-item footer-item--vertical">
               <h2>Contact</h2>
               <ul>
                 <li>Live Chat</li>
                 <li>Email Forum</li>
               </ul>
             </li>
-            <li>
+            <li className="footer-item footer-item--vertical">
               <h2>Help</h2>
               <ul>
                 <li>FAQs</li>
                 <li>Forms</li>
               </ul>
             </li>
-            <li>
+            <li className="footer-item footer-item--vertical">
               <h2>About us</h2>
               <ul>
                 <li>Who we are</li>
                 <li>Get to know OptumRx</li>
               </ul>
             </li>
-            <li>
+            <li className="footer-item footer-item--vertical">
               <h2>Try the app</h2>
               <ul>
                 <li>
