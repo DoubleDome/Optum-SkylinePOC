@@ -1,0 +1,31 @@
+[
+  {
+    "id": "047017a4-1e89-46e6-8bea-aff3a94c6010",
+    "type": "caregiver",
+    "address": "1898 SW 17 St.",
+    "city": "Miami",
+    "state": "Florida",
+    "zipcode": "33145",
+    "name": "Kim M."
+  },
+  {
+    "id": "916e541e-7b4f-4a8a-a45c-c1669a5ccd21",
+    "type": "patient",
+    "name": "Bill M.",
+    "address": "9105 SW 36 St",
+    "city": "Miami",
+    "state": "Florida",
+    "zipcode": "33165",
+    "managedBy": "047017a4-1e89-46e6-8bea-aff3a94c6010"
+  },
+  {
+    "id": "725d3504-e980-4623-a07b-caa76d22a8e2",
+    "type": "patient",
+    "name": "Janet M.",
+    "address": "9105 SW 36 St",
+    "city": "Miami",
+    "state": "Florida",
+    "zipcode": "33165",
+    "managedBy": "047017a4-1e89-46e6-8bea-aff3a94c6010"
+  }
+]

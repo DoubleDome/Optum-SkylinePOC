@@ -15,7 +15,7 @@ async function callAPI(URL) {
 }
 class Index extends React.Component {
   static async getInitialProps({query}) {
-    return await callAPI(`http://localhost:3001/user/${query.id || '047017a4-1e89-46e6-8bea-aff3a94c6010'}`);
+    return await callAPI(`http://localhost:3001/root/${query.id || '047017a4-1e89-46e6-8bea-aff3a94c6010'}`);
   }
 
   generateComponent(name, props, idx) {

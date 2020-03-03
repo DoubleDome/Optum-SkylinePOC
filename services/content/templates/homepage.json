@@ -1,1 +1,22 @@
-["header", "actionTiles", "activeMedications", "retailMedications"]
+{
+  "header": {
+    "componentName": "header",
+    "componentOrder": 0,
+    "morningSalutation": "Good morning, ",
+    "afternoonSalutation": "Good afternoon, ",
+    "eveningSalutation": "Good evening, ",
+    "subtitle": "Things you ought to know"
+  },
+  "activeMedications": {
+    "componentName": "activeMedications",
+    "componentOrder": 1,
+    "sectionTitle": "Active Medications",
+    "fillAllMedicationsLabel": "Fill all meds",
+    "homeDeliverySavingsLabel": "off retail with home delivery",
+    "readyForRefillLabel": "Ready to fill",
+    "archiveLabel": "Archive",
+    "autoRefillLabel": "Auto Refill",
+    "refillsRemainingLabel": " refills remaining",
+    "supplyLabel": "day supply"
+  }
+}

@@ -4,7 +4,7 @@ const items = require('./data/orders.json');
 
 router.get('/:id', function(req, res) {
   let result = [];
-  items.map(order => {
+  items.map(item => {
     if (item.id === req.params.id) {
       result.push(item);
     }

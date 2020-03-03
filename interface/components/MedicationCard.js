@@ -125,8 +125,6 @@ function MedicationCard(props) {
 function RefillArea({data, labels, showAutoRefills}) {
   const {autoRefill, refillDate} = data;
   const {archiveLabel, readyForRefillLabel, transferLabel, homeDeliverySavingsLabel} = labels;
-  
-  console.log(data)
 
   if(showAutoRefills){
     return (

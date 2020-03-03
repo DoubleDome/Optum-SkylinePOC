@@ -1,8 +1,23 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const items = require('./data/users.json');
 
 router.get('/:id', function(req, res) {
-  res.json(require(`./data/${req.params.id}.json`));
+  items.map(item => {
+    if (item.id === req.params.id) {
+      res.json(item);
+    }
+  });
+});
+
+router.get('/managedBy/:id', function(req, res) {
+  let result = [];
+  items.map(item => {
+    if (item.managedBy === req.params.id) {
+      result.push(item);
+    }
+  });
+  res.json(result);
 });
 
 module.exports = router;
